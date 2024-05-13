@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Entry</title>
+    <link href="style/style.css" rel="stylesheet" />
+    <script src="src/Choose.js" defer></script>
+  </head>
+  <body>
+    <h1>Client Engagement Activities</h1>
+    <div class="box">
+      <div class="navigation">
+        <ul>
+          <li><a href="Index.html">Add Entry</a></li>
+          <li><a href="Summary.html">Summary</a></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <!-- Choose a category -->
+        <form action="" class="catChoose">
+          <label for="dropCat">Select a Category</label><br />
+          <select name="" id="dropCat">
+            <option value="0">Choose an option</option>
+            <option value="1">Engagement with Practicum Site</option>
+            <option value="2">
+              Preparation & Documentation of Client Engagement
+            </option>
+            <option value="3">Psychometric Testing and Research</option>
+            <option value="4">Community Intervention</option>
+          </select>
+        </form>
+        <br />
+
+        <div class="main">
+          <!-- Group 1 -->
+          <div id="group1" class="group hidden">
+            <h2 class="categories">Engagement with Practicum Site</h2>
+            <form action="" id="cat1" class="data">
+              <div class="option">
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="0"
+                />Individual Counselling<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="1"
+                />Group/Family Counselling<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="2"
+                />Psycho-education Workshop Facilitation<br />
+                <span class="actError error1 errorMsg hidden"
+                  >Invalid field</span
+                >
+              </div>
+              <!-- <br /> -->
+              <div class="extras">
+                <div class="location">
+                  <select name="" id="entryLoc1">
+                    <option value="0">Select a location</option>
+                    <option value="1">SAICAP</option>
+                    <option value="2">Campus</option>
+                  </select>
+                  <span class="locError error1 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+                <!-- <br /> -->
+                <div class="date">
+                  <label for="dateEntry1">Enter date for Entry</label><br />
+                  <input type="date" name="" id="dateEntry1" />
+                  <span class="dateError error1 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+                <!-- <br /> -->
+                <div class="timeframe">
+                  <label for="Cat1Time"
+                    >How long was the session in minutes?</label
+                  ><br />
+                  <input type="number" id="Cat1Time" />
+                  <span class="timeError error1 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+              </div>
+              <div>
+                <input type="submit" id="cat1save" value="Save" onclick="" " />
+              </div>
+            </form>
+          </div>
+          <!-- Group 2 -->
+          <div id="group2" class="group hidden">
+            <h2 class="categories">
+              Preparation & Documentation of Client Engagement
+            </h2>
+            <form action="" id="cat2" class="data">
+              <div class="option">
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="0"
+                />Preperation for client sessions, groups and workshops<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="1"
+                />Weekly theoretical research on client cases<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="2"
+                />Write-up of case notes(Individual/group sessions and workshop
+                reflections)<br />
+                <span class="actError error2 errorMsg hidden"
+                  >Invalid field</span
+                >
+              </div>
+              <div class="extras">
+                <div class="location">
+                  <select name="" id="entryLoc2">
+                    <option value="0">Select a location</option>
+                    <option value="1">SAICAP</option>
+                    <option value="2">Campus</option>
+                  </select>
+                  <span class="locError error2 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+                <div class="date">
+                  <label for="dateEntry2">Enter date for Entry</label><br />
+                  <input type="date" name="" id="dateEntry2" />
+                  <span class="dateError error2 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+                <div class="timeframe">
+                  <label for="Cat2Time"
+                    >How long was the session in minutes?</label
+                  ><br />
+                  <input type="number" id="Cat2Time" />
+                  <span class="timeError error2 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+              </div>
+              <div><input type="button" id="cat2save" value="Save" /></div>
+            </form>
+          </div>
+          <!-- Group 3 -->
+          <div id="group3" class="group hidden">
+            <h2 class="categories">Psychometric Testing and Research</h2>
+            <form action="" id="cat3" class="data">
+              <div class="option">
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="0"
+                />Preparation and intake<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="1"
+                />Select a Test Battery (Book and collect test material)<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="2"
+                />Administration of a Test Battery<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="3"
+                />Scoring, Interpretation and Report Writing<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="4"
+                />Preparation and Feedback<br />
+                <span class="actError error3 errorMsg hidden"
+                  >Invalid field</span
+                >
+              </div>
+              <div class="extras">
+                <div class="location">
+                  <select name="" id="entryLoc3">
+                    <option value="0">Select a location</option>
+                    <option value="1">SAICAP</option>
+                    <option value="2">Campus</option>
+                  </select>
+                  <span class="locError error3 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+                <div class="date">
+                  <label for="dateEntry3">Enter date for Entry</label><br />
+                  <input type="date" name="" id="dateEntry3" />
+                  <span class="dateError error3 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+                <div class="timeframe">
+                  <label for="Cat3Time"
+                    >How long was the session in minutes?</label
+                  ><br />
+                  <input type="number" id="Cat3Time" />
+                  <span class="timeError error3 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+              </div>
+              <div><input type="button" id="cat3save" value="Save" /></div>
+            </form>
+          </div>
+          <!-- Group 4 -->
+          <div id="group4" class="group hidden">
+            <h2 class="categories">Community Intervention</h2>
+            <form action="" id="cat4" class="data">
+              <div class="option">
+                <input class="radio" type="radio" name="option" value="0" />Need
+                Analysis<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="1"
+                />Resource Allocation<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="2"
+                />Implementation<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="3"
+                />Evaluation<br />
+                <input
+                  class="radio"
+                  type="radio"
+                  name="option"
+                  value="4"
+                />Report Writing<br />
+                <span class="actError error4 errorMsg hidden"
+                  >Invalid field</span
+                >
+              </div>
+              <div class="extras">
+                <div class="location">
+                  <select name="" id="entryLoc4">
+                    <option value="0">Select a location</option>
+                    <option value="1">SAICAP</option>
+                    <option value="2">Campus</option>
+                  </select>
+                  <span class="locError error4 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+                <div class="date">
+                  <label for="dateEntry4">Enter date for Entry</label><br />
+                  <input type="date" name="" id="dateEntry4" />
+                  <span class="dateError error4 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+                <div class="timeframe">
+                  <label for="Cat4Time"
+                    >How long was the session in minutes?</label
+                  ><br />
+                  <input type="number" id="Cat4Time" />
+                  <span class="timeError error4 errorMsg hidden"
+                    >Invalid field</span
+                  >
+                </div>
+              </div>
+              <div><input type="button" id="cat4save" value="Save" /></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="entryOutput hidden">
+      <p id="logEntry">This is where you will find me</p>
+      <br />
+      <button type="submit" id="confirmEntry" class="confirm">Confirm</button>
+      <button type="submit" id="denyEntry" class="confirm">Deny</button>
+    </div>
+
+    <!-- <input type="submit" id="test" class="test" /> -->
+  </body>
+</html>

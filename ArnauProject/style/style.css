@@ -1,0 +1,178 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background: linear-gradient(to right, skyblue, lightgreen);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 4px auto 4px auto;
+}
+table {
+  width: 420px;
+  margin: 1.5rem 0;
+  min-height: 250px;
+  border: 5px solid black;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+.cat:hover {
+  border-width: 7px;
+  /* border-radius: 10px; */
+  box-shadow: 0px 5px 5px black;
+  opacity: 1;
+  background-color: lightcyan;
+}
+
+th,
+td {
+  padding: 0.5rem 5px;
+}
+
+td {
+  text-align: left;
+}
+
+td:nth-child(even) {
+  width: 75px;
+  border-left: 2px solid black;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow: row;
+  width: 70vw;
+  justify-items: center;
+}
+
+.list .cat {
+  grid-column: span 6;
+}
+
+/* .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3rem;
+} */
+
+.timeframe {
+  position: relative;
+}
+
+.errorMsg {
+  color: red;
+  font-weight: 700;
+}
+
+#group1,
+#group2,
+#group3,
+#group4 {
+  /* display: none; */
+  padding: 5px;
+}
+
+.box {
+  display: flex;
+  gap: 50px;
+}
+.group {
+  border: 5px solid black;
+  border-radius: 10px;
+  background-color: rgba(25, 25, 25, 0.008);
+}
+
+.extras {
+  display: flex;
+  flex-direction: column;
+  /* align-content: space-between; */
+  gap: 0.5rem;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  /* align-content: space-evenly; */
+  /* flex-wrap: wrap; */
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* .item-3 {
+  order: 0;
+  align-self: flex-end;
+} */
+.entryOutput {
+  position: fixed;
+  width: 100%;
+  height: 20px;
+
+  padding: 20px;
+  bottom: 0px;
+  background-color: rgb(242, 249, 249);
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  gap: 2rem;
+}
+
+.confirm {
+  right: 0px;
+  height: 20px;
+  width: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+.navigation {
+  width: 100px;
+  position: relative;
+  margin: 10px 0px 0px 10px;
+}
+
+.content {
+  float: right;
+  margin-top: 10px;
+  width: 95%;
+}
+
+#cat1,
+#cat2,
+#cat3,
+#cat4 {
+  padding-left: 20px;
+  /* visibility: hidden; */
+}
+
+.categories {
+  padding: 10px 20px 5px 20px;
+  margin: 0px;
+}
+
+#cat1save,
+#cat2save,
+#cat3save,
+#cat4save {
+  margin-top: 5px;
+}
+
+.dateEntry {
+  left: 10%;
+}
+
+#Cat1Time,
+#Cat2Time,
+#Cat3Time,
+#Cat4Time {
+  width: 100px;
+  height: 16px;
+}
