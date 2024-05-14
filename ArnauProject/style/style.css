@@ -139,10 +139,14 @@ td:nth-child(even) {
   margin: 10px 0px 0px 10px;
 }
 
-.content {
+.contentSum {
   float: right;
   margin-top: 10px;
   width: 95%;
+}
+
+.contentIndex {
+  width: 400px;
 }
 
 #cat1,
@@ -154,7 +158,7 @@ td:nth-child(even) {
 }
 
 .categories {
-  padding: 10px 20px 5px 20px;
+  padding: 10px 10px 5px 10px;
   margin: 0px;
 }
 

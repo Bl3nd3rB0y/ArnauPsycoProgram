@@ -198,7 +198,7 @@ async function postEntry() {
     body: JSON.stringify({
       parcel: `\n${
         titles[`title${getCat()}`]
-      }#${value}#${entryLoc}#${entryDate}#${time}`,
+      },${value},${entryLoc},${entryDate},${time}`,
     }),
   });
 }

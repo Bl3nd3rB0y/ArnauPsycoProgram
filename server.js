@@ -11,23 +11,16 @@ app.listen(PORT, () => {
 app.use(express.static("ArnauProject"));
 app.use(express.json());
 
-const filePath = "./ArnauProject/src/txtfiles/entries.txt";
+const entriesFile = "./ArnauProject/src/txtfiles/entries.txt";
 
-const getSummery = function () {
-  // let sumString;
-  let temp;
-  if (fileExists(filePath)) {
-    temp = fs.readFileSync(filePath, "utf-8");
-  }
-  return temp;
-};
-
-const sumString = getSummery();
-
-function getArray() {
-  console.log(1, sumString);
+/**
+ *
+ * @param {string} sumString
+ * @returns Array of objects
+ */
+function decryptString(sumString) {
   let arrSummary = sumString.split("\n").map((entry) => {
-    let arrObj = entry.split("#");
+    let arrObj = entry.split(",");
     let objEntry = {
       cat: arrObj[0],
       act: arrObj[1],
@@ -41,11 +34,19 @@ function getArray() {
   return arrSummary;
 }
 
-let sumDisplay;
+app.get("/api/summary", (req, res) => {
+  // get data from textfile
+  fs.readFile(entriesFile, "utf-8", (e, data) => {
+    if (e) {
+      console.log(e);
+      return;
+    }
 
-app.get("/summary", (req, res) => {
-  sumDisplay = getArray();
-  res.status(200).json({ summary: sumDisplay });
+    // send data to client
+    const summaryArr = decryptString(data);
+
+    res.status(200).json({ summary: summaryArr });
+  });
 });
 
 app.post("/", (req, res) => {
@@ -59,15 +60,15 @@ app.post("/", (req, res) => {
 });
 
 function saveEntry(entryString) {
-  if (!fileExists(filePath)) {
-    fs.writeFile(filePath, entryString, (err) => {
+  if (!fileExists(entriesFile)) {
+    fs.writeFile(entriesFile, entryString, (err) => {
       if (err) {
         console.log(err);
         return;
       }
     });
   } else {
-    fs.appendFile(filePath, entryString, (err) => {
+    fs.appendFile(entriesFile, entryString, (err) => {
       if (err) {
         console.log(err);
         return;
