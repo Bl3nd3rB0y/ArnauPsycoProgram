@@ -1,7 +1,11 @@
-const express = require("express");
+// const express = require("express");
+import { error } from "console";
+import express from "express";
+import fs from "fs";
 const app = express();
 const PORT = 3030;
-const fs = require("fs");
+// const fs = require("fs");
+
 // const path = require("path");
 
 app.listen(PORT, () => {
@@ -68,12 +72,43 @@ function saveEntry(entryString) {
       }
     });
   } else {
-    fs.appendFile(entriesFile, entryString, (err) => {
-      if (err) {
-        console.log(err);
+    fs.readFile(entriesFile, "utf-8", (e, data) => {
+      if (e) {
+        console.log(e);
         return;
       }
+      if (data) {
+        console.log(data);
+        console.log("Textfile is not empty");
+        entryString = "\n" + entryString;
+        fs.appendFile(entriesFile, entryString, (err) => {
+          if (err) {
+            console.log(err);
+            return;
+          }
+        });
+      } else {
+        console.log("error");
+        console.log("Textfile is empty");
+
+        fs.appendFile(entriesFile, entryString, (err) => {
+          if (err) {
+            console.log(err);
+            return;
+          }
+        });
+      }
+      // send data to client
+
+      const summaryArr = data;
+      console.log(summaryArr);
     });
+    // fs.appendFile(entriesFile, entryString, (err) => {
+    //   if (err) {
+    //     console.log(err);
+    //     return;
+    //   }
+    // });
   }
 }
 

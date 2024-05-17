@@ -18,3 +18,4 @@ Community Intervention,Resource Allocation,SAICAP,2024-05-09,47
 Preparation & Documentation of Client Engagement,Write-up of case notes(Individual/group sessions and workshop reflections),Campus,2024-05-13,3
 Preparation & Documentation of Client Engagement,Write-up of case notes(Individual/group sessions and workshop reflections),SAICAP,2024-04-28,551
 Community Intervention,Report Writing,Campus,2024-05-14,58
+Psychometric Testing and Research,Preparation and intake,SAICAP,2024-05-14,86

@@ -196,7 +196,7 @@ async function postEntry() {
       "content-Type": "application/json",
     },
     body: JSON.stringify({
-      parcel: `\n${
+      parcel: `${
         titles[`title${getCat()}`]
       },${value},${entryLoc},${entryDate},${time}`,
     }),

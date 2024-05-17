@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Summary</title>
     <link href="style/style.css" rel="stylesheet" />
-    <script src="src/Summary.js" defer></script>
   </head>
   <body>
     <h1>Client Engagement Activities</h1>
@@ -17,31 +16,39 @@
         </ul>
       </div>
       <div class="content">
-        <button id="inputShow">Show Summary</button>
-        <button id="inputHide" class="hidden">Hide Summary</button>
-        <button id="sumTestData">test</button>
-        <div class="display"><p id="sumShow"></p></div>
+        <button id="inputMins" class="minDisplay hidden">
+          Show in Minutes
+        </button>
+        <button id="inputHours" class="hourDisplay">Show in Hours</button>
+        <!-- <button id="sumTestData">test</button> -->
+        <!-- <div class="display"><p id="sumShow"></p></div> -->
         <!-- <div class="display"><p id=""></p></div> -->
 
         <div class="list">
-          <table class="cat hidden cat-1">
+          <table class="cat cat-1">
             <tr>
               <th colspan="2">Engagement with Practicum Site</th>
             </tr>
             <tr class="row-0 row">
               <td>Individual Counselling</td>
-              <td id="time0">Time:</td>
+              <td>Time:<span id="time0" class="time"> </span></td>
             </tr>
             <tr class="row-1 row">
               <td>Group/Family Counselling</td>
-              <td id="time1">Time:</td>
+              <td>Time:<span id="time1" class="time"> </span></td>
             </tr>
             <tr class="row-2 row">
               <td>Psycho-education Workshop Facilitation</td>
-              <td id="time2">Time:</td>
+              <td>Time:<span id="time2" class="time"> </span></td>
+            </tr>
+
+            <tr class="row-3 row">
+              <td>Total <span class="total-hours"></span> Remaining</td>
+              <td>Time:<span id="time3" class="time"> </span></td>
             </tr>
           </table>
-          <table class="cat hidden cat-2">
+          <canvas class="chart" id="chartCat-1"></canvas>
+          <table class="cat cat-2">
             <tr>
               <th colspan="2">
                 Preparation & Documentation of Client Engagement
@@ -49,72 +56,104 @@
             </tr>
             <tr class="row-0 row">
               <td>Preperation for client sessions, groups and workshops</td>
-              <td id="time0">Time:</td>
+              <td>Time:<span id="time0" class="time"> </span></td>
             </tr>
             <tr class="row-1 row">
               <td>Weekly theoretical research on client cases</td>
-              <td id="time1">Time:</td>
+              <td>Time:<span id="time1" class="time"> </span></td>
             </tr>
             <tr class="row-2 row">
               <td>
                 Write-up of case notes(Individual/group sessions and workshop
                 reflections)
               </td>
-              <td id="time2">Time:</td>
+              <td>Time:<span id="time2" class="time"> </span></td>
+            </tr>
+            <tr class="row-3 row">
+              <td>Total <span class="total-hours"></span> Remaining</td>
+              <td>Time:<span id="time3" class="time"> </span></td>
             </tr>
           </table>
-          <table class="cat hidden cat-3">
+          <canvas class="chart" id="chartCat-2"></canvas>
+          <table class="cat cat-3">
             <tr>
               <th colspan="2">Psychometric Testing and Research</th>
             </tr>
             <tr class="row-0 row">
               <td>Preparation and intake</td>
-              <td id="time0">Time:</td>
+              <td>Time:<span id="time0" class="time"> </span></td>
             </tr>
             <tr class="row-1 row">
               <td>Select a Test Battery (Book and collect test material)</td>
-              <td id="time1">Time:</td>
+              <td>Time:<span id="time1" class="time"> </span></td>
             </tr>
             <tr class="row-2 row">
               <td>Administration of a Test Battery</td>
-              <td id="time2">Time:</td>
+              <td>Time:<span id="time2" class="time"> </span></td>
             </tr>
             <tr class="row-3 row">
               <td>Scoring, Interpretation and Report Writing</td>
-              <td id="time3">Time:</td>
+              <td>Time:<span id="time3" class="time"> </span></td>
             </tr>
             <tr class="row-4 row">
               <td>Preparation and Feedback</td>
-              <td id="time4">Time:</td>
+              <td>Time:<span id="time4" class="time"> </span></td>
+            </tr>
+            <tr class="row-5 row">
+              <td>Total <span class="total-hours"></span> Remaining</td>
+              <td>Time:<span id="time5" class="time"> </span></td>
             </tr>
           </table>
-          <table class="cat hidden cat-4">
+          <canvas class="chart" id="chartCat-3"></canvas>
+          <table class="cat cat-4">
             <tr>
               <th colspan="2">Community Intervention</th>
             </tr>
             <tr class="row-0 row">
               <td>Need Analysis</td>
-              <td id="time0">Time:</td>
+              <td>Time:<span id="time0" class="time"> </span></td>
             </tr>
             <tr class="row-1 row">
               <td>Resource Allocation</td>
-              <td id="time1">Time:</td>
+              <td>Time:<span id="time1" class="time"> </span></td>
             </tr>
             <tr class="row-2 row">
               <td>Implementation</td>
-              <td id="time2">Time:</td>
+              <td>Time:<span id="time2" class="time"> </span></td>
             </tr>
             <tr class="row-3 row">
               <td>Evaluation</td>
-              <td id="time3">Time:</td>
+              <td>Time:<span id="time3" class="time"> </span></td>
             </tr>
             <tr class="row-4 row">
               <td>Report Writing</td>
-              <td id="time4">Time:</td>
+              <td>Time:<span id="time4" class="time"> </span></td>
+            </tr>
+            <tr class="row-5 row">
+              <td>Total <span class="total-hours"></span> Remaining</td>
+              <td>Time:<span id="time5" class="time"> </span></td>
             </tr>
           </table>
+          <canvas class="chart" id="chartCat-4"></canvas>
         </div>
       </div>
     </div>
+    <script src="./src/Summary.js" type="module"></script>
+    <!-- <script src="./MyChart.js" type="module"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"
+      type="module"
+    ></script>
+
+    <!-- <script>
+      ?
+      const mycharts = {
+        myChart0: document.getElementById("chartCat-1"),
+        myChart1: document.getElementById("chartCat-2"),
+        myChart2: document.getElementById("chartCat-3"),
+        myChart3: document.getElementById("chartCat-4"),
+      };
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
   </body>
 </html>
